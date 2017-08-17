@@ -1,0 +1,1238 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body {
+    background-color: black;
+    /*background-image: url("img/body_e-Vinil.jpg");*/
+}
+
+.img {
+    width: 960px;
+    height: 208px;
+}
+
+.span {
+    Font-Size: X-Large;
+    color: White;
+}
+
+
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+    position: relative;
+    width: 960px;
+    height: auto;
+    background-color: #1b1b1b;
+    margin: 0px auto;
+    border: 1px solid #496077;
+    cursor: default;
+}
+
+.header {
+    background-color: #000;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.footer {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #3cc4e6;
+    padding: 40px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    background-color: #002f51;
+    margin-top: 10px;
+}
+
+
+
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear {
+    clear: both;
+}
+
+.title {
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.HeadLogin {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    text-align: right;
+    margin-right: auto;
+    color: white;
+    z-index: inherit;
+    left: 105px;
+    top: 2px;
+}
+
+    .HeadLogin a:link {
+        color: white;
+    }
+
+    .HeadLogin a:visited {
+        color: white;
+    }
+
+    .HeadLogin a:hover {
+        color: white;
+    }
+
+
+/*structuration page
+-----------------------------------------*/
+.Bodypage {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.leftMenu {
+    margin-top: auto;
+    float: left;
+    width: auto;
+    min-height: 600px;
+    height: auto;
+}
+
+.Contenu {
+    width: 810px;
+    min-height: 600px;
+    height: auto;
+}
+
+
+
+/*Css du right Menu
+------------------------------------------------*/
+/* Some stylesheet reset */
+.rightMenu > ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    line-height: 1;
+}
+
+/* The container */
+.rightMenu > ul {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: auto;
+}
+
+    /* The list elements which contain the links */
+    .rightMenu > ul li {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 150px;
+    }
+
+        /* General link styling */
+        .rightMenu > ul li a {
+            /* Layout */
+            display: block;
+            position: relative;
+            margin: 0;
+            border-top: 1px dotted #3a3a3a;
+            border-bottom: 1px dotted #1b1b1b;
+            padding: 11px 20px;
+            width: 110px;
+            /* Typography */
+            font-family: Helvetica, Arial, sans-serif;
+            color: #d8d8d8;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px #000;
+            font-size: 13px;
+            font-weight: 300;
+            /* Background & effects */
+            background: #282828;
+        }
+
+        /* Rounded corners for the first link of the menu/submenus */
+        .rightMenu > ul li:first-child > a {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-top: 0;
+        }
+
+        /* Rounded corners for the last link of the menu/submenus */
+        .rightMenu > ul li:last-child > a {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom: 0;
+        }
+
+
+        /* The hover state of the menu/submenu links */
+        .rightMenu > ul li > a:hover, div.leftMenu > ul li:hover > a {
+            color: #3cc4e6;
+            text-shadow: 0 1px 0 #fff;
+            background: #e6e6e6;
+            background: -webkit-linear-gradient(bottom, #e6e6e6, #fff);
+            background: -ms-linear-gradient(bottom, #e6e6e6, #fff);
+            background: -moz-linear-gradient(bottom, #e6e6e6, #fff);
+            background: -o-linear-gradient(bottom, #e6e6e6, #fff);
+            border-color: transparent;
+        }
+
+    /* The arrow indicating a submenu */
+    .rightMenu > ul .has-sub > a::after {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        width: 0px;
+        height: 0px;
+        /* Creating the arrow using borders */
+        border: 4px solid transparent;
+        border-left: 4px solid #d8d8d8;
+    }
+
+    /* The same arrow, but with a darker color, to create the shadow effect */
+    .rightMenu > ul .has-sub > a::before {
+        content: '';
+        position: absolute;
+        top: 17px;
+        right: 10px;
+        width: 0px;
+        height: 0px;
+        /* Creating the arrow using borders */
+        border: 4px solid transparent;
+        border-left: 4px solid #000;
+    }
+
+    /* Changing the color of the arrow on hover */
+    .rightMenu > ul li > a:hover::after, div.leftMenu > ul li:hover > a::after {
+        border-left: 4px solid #3cc4e6;
+    }
+
+    .rightMenu > ul li > a:hover::before, div.leftMenu > ul li:hover > a::before {
+        border-left: 4px solid #fff;
+    }
+
+    /* THE SUBMENUS */
+    .rightMenu > ul ul {
+        position: absolute;
+        left: 150px;
+        top: -9999px;
+        padding-left: 5px;
+        opacity: 0;
+        /* The fade effect, created using an opacity transition */
+        -webkit-transition: opacity .3s ease-in;
+        -moz-transition: opacity .3s ease-in;
+        -o-transition: opacity .3s ease-in;
+        -ms-transition: opacity .3s ease-in;
+    }
+
+    /* Showing the submenu when the user is hovering the parent link */
+    .rightMenu > ul li:hover > ul {
+        top: 0px;
+        opacity: 1;
+    }
+
+
+
+
+/*Css du left Menu
+------------------------------------------------*/
+/* Some stylesheet reset */
+.leftMenu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    line-height: 1;
+}
+
+/* The container */
+.leftMenu > ul {
+    display: block;
+    position: relative;
+    width: 150px;
+}
+
+    /* The list elements which contain the links */
+    .leftMenu > ul li {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 150px;
+    }
+
+        /* General link styling */
+        .leftMenu > ul li a {
+            /* Layout */
+            display: block;
+            position: relative;
+            margin: 0;
+            border-top: 1px dotted #3a3a3a;
+            border-bottom: 1px dotted #1b1b1b;
+            padding: 11px 20px;
+            width: 110px;
+            /* Typography */
+            font-family: Helvetica, Arial, sans-serif;
+            color: #d8d8d8;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px #000;
+            font-size: 13px;
+            font-weight: 300;
+            /* Background & effects */
+            background: #282828;
+        }
+
+        /* Rounded corners for the first link of the menu/submenus */
+        .leftMenu > ul li:first-child > a {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-top: 0;
+        }
+
+        /* Rounded corners for the last link of the menu/submenus */
+        .leftMenu > ul li:last-child > a {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom: 0;
+        }
+
+
+        /* The hover state of the menu/submenu links */
+        .leftMenu > ul li > a:hover, .leftMenu > ul li:hover > a {
+            color: #3cc4e6;
+            text-shadow: 0 1px 0 #fff;
+            background: #e6e6e6;
+            background: -webkit-linear-gradient(bottom, #e6e6e6, #fff);
+            background: -ms-linear-gradient(bottom, #e6e6e6, #fff);
+            background: -moz-linear-gradient(bottom, #e6e6e6, #fff);
+            background: -o-linear-gradient(bottom, #e6e6e6, #fff);
+            border-color: transparent;
+        }
+
+    /* The arrow indicating a submenu */
+    .leftMenu > ul .has-sub > a::after {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        width: 0px;
+        height: 0px;
+        /* Creating the arrow using borders */
+        border: 4px solid transparent;
+        border-left: 4px solid #d8d8d8;
+    }
+
+    /* The same arrow, but with a darker color, to create the shadow effect */
+    .leftMenu > ul .has-sub > a::before {
+        content: '';
+        position: absolute;
+        top: 17px;
+        right: 10px;
+        width: 0px;
+        height: 0px;
+        /* Creating the arrow using borders */
+        border: 4px solid transparent;
+        border-left: 4px solid #000;
+    }
+
+    /* Changing the color of the arrow on hover */
+    .leftMenu > ul li > a:hover::after, .leftMenu > ul li:hover > a::after {
+        border-left: 4px solid #3cc4e6;
+    }
+
+    .leftMenu > ul li > a:hover::before, .leftMenu > ul li:hover > a::before {
+        border-left: 4px solid #fff;
+    }
+
+    /* THE SUBMENUS */
+    .leftMenu > ul ul {
+        position: absolute;
+        left: 150px;
+        top: -9999px;
+        padding-left: 5px;
+        opacity: 0;
+        /* The fade effect, created using an opacity transition */
+        -webkit-transition: opacity .3s ease-in;
+        -moz-transition: opacity .3s ease-in;
+        -o-transition: opacity .3s ease-in;
+        -ms-transition: opacity .3s ease-in;
+    }
+
+    /* Showing the submenu when the user is hovering the parent link */
+    .leftMenu > ul li:hover > ul {
+        top: 0px;
+        opacity: 1;
+    }
+
+
+
+
+/*Menu Principale
+----------------------------------------*/
+
+.divmenu ul, .divmenu li, .divmenu span, .divmenu a {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.divmenu {
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: solid;
+    width: auto;
+    height: 49px;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    background: #141414;
+    border-bottom: 2px solid #e00f16;
+}
+
+    .divmenu:after, .divmenu ul:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .divmenu a {
+        background: #141414;
+        color: #ffffff;
+        display: inline-block;
+        font-family: Helvetica, Arial, Verdana, sans-serif;
+        font-size: 12px;
+        line-height: 49px;
+        padding: 0 22px;
+        text-decoration: none;
+    }
+
+    .divmenu ul {
+        list-style: none;
+    }
+
+    .divmenu > ul {
+        float: left;
+    }
+
+        .divmenu > ul > li {
+            float: left;
+        }
+
+            .divmenu > ul > li:hover:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #e00f16;
+                margin-left: -10px;
+            }
+
+            .divmenu > ul > li:first-child > a {
+                border-radius: 5px 0 0 0;
+                -moz-border-radius: 5px 0 0 0;
+                -webkit-border-radius: 5px 0 0 0;
+            }
+
+            .divmenu > ul > li:last-child > a {
+                border-radius: 0 5px 0 0;
+                -moz-border-radius: 0 5px 0 0;
+                -webkit-border-radius: 0 5px 0 0;
+            }
+
+            .divmenu > ul > li.active > a {
+                box-shadow: inset 0 0 3px #000000;
+                -moz-box-shadow: inset 0 0 3px #000000;
+                -webkit-box-shadow: inset 0 0 3px #000000;
+                background: #070707;
+            }
+
+            .divmenu > ul > li:hover > a {
+                background: #070707;
+                box-shadow: inset 0 0 3px #000000;
+                -moz-box-shadow: inset 0 0 3px #000000;
+                -webkit-box-shadow: inset 0 0 3px #000000;
+            }
+
+    .divmenu .has-sub {
+        z-index: 1;
+    }
+
+        .divmenu .has-sub:hover > ul {
+            display: block;
+        }
+
+        .divmenu .has-sub ul {
+            display: none;
+            position: absolute;
+            width: 200px;
+            top: 100%;
+            left: 0;
+        }
+
+            .divmenu .has-sub ul li {
+                *margin-bottom: -1px;
+            }
+
+                .divmenu .has-sub ul li a {
+                    background: #e00f16;
+                    border-bottom: 1px dotted #ec6f73;
+                    filter: none;
+                    font-size: 11px;
+                    display: block;
+                    line-height: 120%;
+                    padding: 10px;
+                }
+
+                .divmenu .has-sub ul li:hover a {
+                    background: #b00c11;
+                }
+
+        .divmenu .has-sub .has-sub:hover > ul {
+            display: block;
+        }
+
+        .divmenu .has-sub .has-sub ul {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+
+            .divmenu .has-sub .has-sub ul li a {
+                background: #b00c11;
+                border-bottom: 1px dotted #d06d70;
+            }
+
+                .divmenu .has-sub .has-sub ul li a:hover {
+                    background: #80090d;
+                }
+
+
+
+
+/*
+----------------------------------------------*/
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+/*Css tela de enviar senha para email
+----------------------------------------------*/
+.ResetPass {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    margin: 20px auto;
+    margin-left: 20px;
+    float: left;
+    color: white;
+    width: 600px;
+}
+
+    .ResetPass div#titulo {
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .ResetPass p#descricao {
+        margin-bottom: 40px;
+    }
+
+    .ResetPass div#recuperar {
+        margin-left: 10%;
+        color: white;
+    }
+
+        .ResetPass div#recuperar span {
+            color: white;
+            display: block;
+        }
+
+        .ResetPass div#recuperar input[type=text] {
+            font-size: 20px;
+            margin-top: 5px;
+            width: 400px;
+        }
+
+        .ResetPass div#recuperar input[type=submit] {
+            font-size: 16px;
+            background-color: #0094ff;
+            color: black;
+            border: 2px solid #0094ff;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 10px auto;
+            margin-left: 5px;
+        }
+
+            .ResetPass div#recuperar input[type=submit]:hover {
+                background-color: black;
+                color: #0094ff;
+                border: 2px solid #0094ff;
+                text-decoration: none;
+                margin-left: auto;
+                margin-left: 5px;
+            }
+
+
+
+/*Css logout
+----------------------------------------------*/
+.desconnect {
+    background-color: #3a3a3a;
+    font-size: 20px;
+    text-align: right;
+    color: White;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    margin-top: 140px;
+    margin-left: 770px;
+    width: 200px;
+    height: 65px;
+    top: 0px;
+    left: -13px;
+}
+
+.desconnect_img_perfil {
+    float: left;
+    margin: 5px 5px 5px 5px;
+    width: 55px;
+    height: 55px;
+}
+
+    .desconnect_img_perfil img {
+        border: 1px solid #0094ff;
+        width: 55px;
+        height: 55px;
+    }
+
+.desconnect_span_user {
+    background-color: #1b1b1b;
+    float: left;
+    margin-top: 5px;
+    max-width: 140px;
+    width: 134px;
+}
+
+    .desconnect_span_user span {
+        float: left;
+        margin-left: 5px;
+    }
+
+.desconnect_edit {
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+    .desconnect_edit img {
+        float: none;
+        width: 20px;
+        height: 20px;
+    }
+
+.desconnect_sair {
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+    .desconnect_sair a:link {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .desconnect_sair a:visited {
+        color: white;
+    }
+
+    .desconnect_sair a:hover {
+        text-decoration: underline;
+        color: white;
+    }
+
+
+
+
+
+/*Css tela de login
+----------------------------------------------*/
+.Login {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    margin: 20px auto;
+    margin-left: 50px;
+    width: 650px;
+    float: left;
+    color: white;
+}
+
+    .Login div#titulo {
+        margin-left: 180px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+.descricaoLogin {
+    margin-left: 50px;
+    color: white;
+}
+
+    .descricaoLogin a {
+        font-size: 14px;
+        padding-top: 10px;
+        color: #0094ff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        .descricaoLogin a:hover {
+            color: #be1919;
+            text-decoration: underline;
+        }
+
+        .descricaoLogin a:visited {
+            color: #0094ff;
+        }
+
+.divlogin span {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 120px;
+}
+
+.divlogin input[type=text], input[type=password] {
+    font-size: 20px;
+    display: block;
+    margin-left: 120px;
+    width: 300px;
+}
+
+.divlogin input[type=submit] {
+    font-size: 16px;
+    background-color: #0094ff;
+    color: black;
+    border: 2px solid #0094ff;
+    text-decoration: none;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+    .divlogin input[type=submit]:hover {
+        background-color: black;
+        color: #0094ff;
+        border: 2px solid #0094ff;
+        text-decoration: none;
+    }
+
+.divlogin a {
+    font-size: 14px;
+    padding-top: 10px;
+    color: #0094ff;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 120px;
+}
+
+    .divlogin a:hover {
+        color: #be1919;
+        text-decoration: underline;
+    }
+
+    .divlogin a:visited {
+        color: #0094ff;
+    }
+
+
+.window {
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FFF;
+    z-index: 9900;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#mascara {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9000;
+    background-color: #000;
+    display: none;
+}
+
+.fechar {
+    display: block;
+    text-align: right;
+}
+
+
+
+/*Css tela de registro conta
+----------------------------------------------*/
+
+.dados {
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    width: 600px;
+    margin: 10px auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    float: left;
+}
+
+    .dados h1 {
+        margin-left: 100px;
+        color: white;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .dados h3 {
+        /*font-size: 25px;*/
+        color: white;
+        padding-bottom: 5px;
+        border-bottom-color: #0094ff;
+        border-bottom-width: thin;
+        border-bottom-style: dotted;
+        text-transform: uppercase;
+    }
+
+    .dados input[type=submit] {
+        font-size: 16px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 20px;
+        background-color: #0094ff;
+        color: black;
+        border: 2px solid #0094ff;
+        text-decoration: double;
+        padding: 5px 30px;
+    }
+
+        .dados input[type=submit]:hover {
+            background-color: black;
+            color: #0094ff;
+            border: 2px solid #0094ff;
+            text-decoration: none;
+        }
+
+.dadosAcesso {
+    float: left;
+    width: 550px;
+}
+
+.acesso {
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    width: 350px;
+}
+
+    .acesso span {
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .acesso input[type=text], input[type=date] {
+        font-size: 16px;
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .acesso input[type=password] {
+        font-size: 16px;
+        width: 300px;
+        margin-left: 50px;
+    }
+
+
+.dadosPessoais {
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    width: 500px;
+    margin: 10px auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    float: left;
+}
+
+    .dadosPessoais span {
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .dadosPessoais input[type=text], input[type=date] {
+        font-size: 16px;
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .dadosPessoais select {
+        font-size: 16px;
+        width: auto;
+        margin-left: 50px;
+    }
+
+.dadosEndereco {
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    width: 500px;
+    margin: 10px auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    float: left;
+}
+
+    .dadosEndereco span {
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .dadosEndereco input[type=text], input[type=date] {
+        font-size: 16px;
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .dadosEndereco select {
+        font-size: 16px;
+        width: auto;
+        margin-left: 50px;
+    }
+
+.img_perfil {
+    width: 150px;
+    height: 150px;
+    float: right;
+    margin: 0px 10px 10px 10px;
+}
+
+    .img_perfil span {
+        color: white;
+        display: block;
+    }
+
+    .img_perfil img {
+        border: 1px solid #0094ff;
+        margin: 10px 10px 10px 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .img_perfil input[type=file] {
+        cursor: pointer;
+        Width: 110px;
+        float: left;
+        margin-left: 5px;
+    }
+
+/*Css tela de registro produto 
+----------------------------------------------*/
+.produto {
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    width: 500px;
+    margin: 10px auto;
+    padding-left: 4%;
+    float: left;
+}
+
+    .produto h1 {
+        font-size: 25px;
+        color: white;
+        padding-bottom: 5px;
+        border-bottom-color: #0094ff;
+        border-bottom-width: thin;
+        border-bottom-style: dotted;
+        text-transform: uppercase;
+    }
+
+.imgdisco {
+    margin-left: 50px;
+    width: 250px;
+    height: 250px;
+}
+
+.produto span {
+    color: white;
+    margin-left: 50px;
+    margin-bottom: auto;
+    display: block;
+}
+
+.produto input[type=text] {
+    font-size: 16px;
+    width: 250px;
+    margin-left: 50px;
+    margin-bottom: auto;
+}
+
+.produto select {
+    font-size: 16px;
+    width: auto;
+    margin-left: 50px;
+}
+
+.produto input[type=submit] {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 20px;
+    background-color: #0094ff;
+    color: black;
+    border: 2px solid #0094ff;
+    text-decoration: double;
+    padding: 5px 30px;
+}
+
+    .produto input[type=submit]:hover {
+        background-color: black;
+        color: #0094ff;
+        border: 2px solid #0094ff;
+        text-decoration: none;
+    }
+
+.produto input[type=file] {
+    cursor: pointer;
+    margin-left: 50px;
+    Width: 110px;
+}
+
+
+
+
+/*Css main lista de produtos
+----------------------------------------------*/
+
+.pageProduto {
+    width: 800px;
+    float: left;
+}
+
+
+.panelProduto {
+    margin: 10px 10px auto;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 800px;
+    height: 200px;
+    margin-bottom: 20px;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    float: left;
+}
+
+.descricao_produto {
+    width: 600px;
+    height: 170px;
+    margin-left: 230px;
+    display: block;
+}
+
+.btnCarrinho input[type=image] {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+    /*background-color: #0094ff;*/
+    color: black;
+    /*border: 2px solid #0094ff;*/
+    right: 40px;
+    bottom: 130px;
+    width: 100px;
+    height: 100px;
+}
+
+    .btnCarrinho input[type=image]:hover {
+        background-color: #0094ff;
+        color: #0094ff;
+        /*border: 2px solid #0094ff;*/
+        text-decoration: none;
+    }
+
+.panelProduto #imgProduto {
+    width: 200px;
+    float: left;
+    height: 200px;
+    border: 10px outset #cc0000;
+    border-radius: 5px 5px;
+}
+
+
+
+
+/*Css paginação dos produtos
+----------------------------------------------*/
+.panelProdutoPage {
+    position: relative;
+    padding-bottom: 100px;
+    left: 300px;
+    bottom: 40px;
+    top: 50px;
+}
+
+    .panelProdutoPage input[type=submit] {
+        cursor: pointer;
+        font-size: 16px;
+        background-color: #0094ff;
+        color: black;
+        border: 2px solid #0094ff;
+    }
+
+        .panelProdutoPage input[type=submit]:hover {
+            background-color: black;
+            color: #0094ff;
+            border: 2px solid #0094ff;
+            text-decoration: none;
+        }
+
+    .panelProdutoPage span {
+        color: white;
+    }
+
+
+
+
+/*Css redimencionar imagens
+----------------------------------------------*/
+     #resizeMe {
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            left: 240px;
+            top: 70px;
+            cursor: move;
+            background-image: url(images/tocrop.jpg);
+            background-position: -190px -20px;
+            background-repeat: no-repeat;
+        }
+
+        #resizeSE, #resizeE, #resizeNE, #resizeN, #resizeNW, #resizeW, #resizeSW, #resizeS {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #333;
+            border: 1px solid #fff;
+            overflow: hidden;
+        }
+
+        #resizeSE {
+            bottom: -10px;
+            right: -10px;
+            cursor: se-resize;
+        }
+
+        #resizeE {
+            top: 50%;
+            right: -10px;
+            margin-top: -5px;
+            cursor: e-resize;
+        }
+
+        #resizeNE {
+            top: -10px;
+            right: -10px;
+            cursor: ne-resize;
+        }
+
+        #resizeN {
+            top: -10px;
+            left: 50%;
+            margin-left: -5px;
+            cursor: n-resize;
+        }
+
+        #resizeNW {
+            top: -10px;
+            left: -10px;
+            cursor: nw-resize;
+        }
+
+        #resizeW {
+            top: 50%;
+            left: -10px;
+            margin-top: -5px;
+            cursor: w-resize;
+        }
+
+        #resizeSW {
+            left: -10px;
+            bottom: -10px;
+            cursor: sw-resize;
+        }
+
+        #resizeS {
+            bottom: -10px;
+            left: 50%;
+            margin-left: -5px;
+            cursor: s-resize;
+        }
+
+        #container {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 650px;
+            height: 450px;
+            background-color: #ccc;
+            background-image: url(images/tocrop_back.jpg);
+        }

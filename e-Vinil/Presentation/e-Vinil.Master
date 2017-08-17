@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="e-Vinil.Master.cs" Inherits="e_Vinil.Presentation.e_Vinil" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>e-Vinil</title>
+    <link href="~/css/StyleMain.css" rel="stylesheet" type="text/css" />
+    <script src="../JScript/jquery-2.1.3.min.js"></script>
+    <script src="../JScript/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server" class="page">
+        <div class="header">
+            <% if (Session["USER"] != null)
+               {%>
+
+            <div class="desconnect">
+                <div class="desconnect_img_perfil">
+                    <asp:Image ID="image_perfil" runat="server" />
+                </div>
+                <div class="desconnect_span_user">
+                    <asp:Label ID="lblUser" runat="server" />
+                </div>
+                <div class="desconnect_edit">
+                    <asp:ImageButton ImageUrl="~/css/img/account/account_edit.png" runat="server" OnClick="Unnamed_Click" />
+                </div>
+                <div class="desconnect_sair">
+                    <asp:LinkButton OnClick="btnLogout_Click" ID="btnLogout" Text="Sair" runat="server" />
+                </div>
+            </div>
+            <% } %>
+            <img class="img" src="~/css/img/head_e-Vinil.jpg" runat="server" />
+            <div class='divmenu'>
+                <ul>
+                    <li><a><span>Heavy Metal</span></a></li>
+                    <li><a><span>Indie</span></a></li>
+                    <li><a><span>New Wave</span></a></li>
+                    <li><a><span>Punk</span></a></li>
+                    <li><a><span>Rock</span></a></li>
+                    <li><a><span>Rock Alternativo</span></a></li>
+                    <li><a><span>Rock Nacional</span></a></li>
+                    <li><a><span>Rock Internacional</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftMenu">
+            <ul>
+                <li><a href="CadastroProduto.aspx" rel="modal"><span>Produtos</span></a></li>
+                <li><a><span></span></a></li>
+                <li><a><span></span></a></li>
+            </ul>
+        </div>
+        <div id="PlaceHolder">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear"></div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    </form>
+    <asp:ContentPlaceHolder runat="server" ID="contentScript">
+    </asp:ContentPlaceHolder>
+    <div class="footer">
+        <footer>
+            © Copyright 2015, e-Vinil by Jurassic<br />
+            Este site foi desenvolvido para propositos educacionais
+        </footer>
+    </div>
+</body>
+</html>
